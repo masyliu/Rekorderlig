@@ -4,21 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekorderlig</title>
+  <meta name="author" content="Masy Liu">
+  <meta name="title" content="Rekorderlig">
+  <meta name="description" content="Rekorderlig, Sweden cider, ">
+  <meta name="keywords" content="Rekorderlig, Sweden cider">
+  <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="styles/style.css">
   <script src="https://kit.fontawesome.com/f49a20a247.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="myFunction()">
+  <div id="preloader">
+    <img src="images/loader.gif" alt="preloader">
+  </div>
   <header>
     <a href="rekorderlig-index.html" id="logo">
       <img src="./images/logo.png" alt="Rekorderlig Logo">
     </a>
     <nav class="navbar">
-      <a href="">About Us</a>
-      <a href="">Flavours</a>
-      <a href="">Stockists</a>
-      <a href="">Join Us</a>
+      <a href="rekorderlig-about-us.html">About Us</a>
+      <a href="rekorderlig-flavours.html">Flavours</a>
+      <a href="rekorderlig-stockists.html">Stockists</a>
+      <a href="rekorderlig-contact-us.html">Contact Us</a>
     </nav>
     <div class="contact-links">
       <a href="https://www.facebook.com/RekorderligHK/?brand_redir=66831942915" target="_blank"><i class="fab fa-facebook-square"></i></a>
@@ -27,6 +35,65 @@
       <a href="https://www.pinterest.com/rekorderlig/_created/" target="_blank"><i class="fab fa-pinterest"></i></a>
     </div>
   </header>
-  <section></section>
+<section>
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LxW4fiQ5354?autoplay=1&loop=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<!-- 
+  <div class="videowrap" style="overflow:hidden; height:1000px; margin-top:4rem;">
+    <div class="video-containeryt">
+      <div id="player" class="youtubevideobg">
+      </div>
+    </div>
+    <div class="videocontent" style="top:23%;">
+      <div class="block2 text-center max80">
+        <h3 style="color:#ffffff;">
+        <span class="text1 nomargbot wow bounceIn" data-wow-delay="0s" data-wow-duration="1s">
+        庭院深深深幾許？楊柳堆煙，簾幕無重數 </span>
+        </h3>
+        <h2 style="color:#ffffff;">
+        <span class="text2 wow zoomIn" data-wow-delay="0.4s" data-wow-duration="2s">
+        草色煙光殘照裡，無言誰會憑闌意？ <span class="accentcolor">綠楊芳草</span> 長亭路 </span>
+        </h2>
+        
+      </div>
+    </div>	
+  </div>
+  <script>
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {				 
+      height: '100%',
+      width: '100%',
+      videoId: 'LxW4fiQ5354',
+      playerVars: { 'autoplay': 1, 'controls': 0, 'rel': 0, 'hd': 1, 'modestbranding': 1, 'loop': 1, 'showinfo':0, 'autohide': 1, 'disablekb': 1 },
+      events: {
+      'onReady': onPlayerReady,
+      onStateChange: function(e){
+        var id = 'LxW4fiQ5354';
+        if(e.data === YT.PlayerState.ENDED){
+          player.loadVideoById(id);
+        }
+      }					
+      }
+    });
+    }			 
+    function onPlayerReady(event) {
+    event.target.playVideo();
+    }
+  </script> -->
+  <script>
+    var myVar;
+    function myFunction() {
+      myVar = setTimeout(showPage, 1000);
+    }
+
+    function showPage() {
+      document.getElementById("preloader").style.display = "none";
+    }
+  </script>
 </body>
 </html>

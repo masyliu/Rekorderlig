@@ -3,7 +3,7 @@ html {
   height: 100vw;
   color: white;
   font-family: serif;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/index-background.jpg) no-repeat center center fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/background.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   overflow: hidden;
@@ -15,8 +15,33 @@ html {
   padding: 0;
 }
 
+/* ============
+preloader
+============ */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(31,30,29);
+  height: 100%;
+  width: 100%;
+}
+
+#preloader img {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: calc(50vh - 50px);
+  left: calc(50vw - 100px);
+}
+
+/* ============
+nav-bar
+============ */
+
 header {
-  background-color: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,6 +53,7 @@ header {
   align-items: center;
   font-family: 'Manrope', sans-serif;
   font: 200;
+  z-index: 10;
 }
 
 a {
@@ -61,11 +87,30 @@ nav a {
   justify-content: center;
 }
 
-/* 
-header > * {
-  border: 1px solid green;
+section {
+  margin-top: 4rem;
+  height: calc(100vh - 4rem);
 }
-
-nav > * {
-  border: 1px solid blue;
+/* ============
+video
+============ */
+/* .videowrap,.videowrapsh {
+	position:relative;
+	overflow:hidden;
+	width:100.1%;
+}
+.videowrap .player .controls {
+	display:none !Important;
+}
+.videowrap .videocontent,.videowrapsh .videocontent {
+	height:50%;
+	margin:auto;
+	position:absolute;
+	top:18%;
+	left:0;
+	bottom:0;
+	right:0;
+	font-weight:900;
+	color:#fff;
+	text-align: center;
 } */
