@@ -6,7 +6,6 @@ html {
   background: linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/background.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
-  overflow: hidden;
 }
 
 *, *:before, *:after {
@@ -54,6 +53,7 @@ header {
   font-family: 'Manrope', sans-serif;
   font: 200;
   z-index: 10;
+  background-color:rgba(170, 170, 170, 0.274);
 }
 
 a {
@@ -88,9 +88,9 @@ nav a {
 }
 
 section {
-  margin-top: 4rem;
-  height: calc(100vh - 4rem);
+  margin: 4rem 4rem 0;
 }
+
 /* ============
 video
 ============ */
@@ -114,3 +114,149 @@ video
 	color:#fff;
 	text-align: center;
 } */
+
+/* ============
+flavours
+============ */
+
+.all-ciders {
+  margin: 5rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10rem);
+  column-gap: 1rem;
+  justify-content: center;
+}
+
+.all-ciders .beer {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+}
+
+
+.all-ciders .beer img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  object-fit: contain;
+}
+
+.all-ciders .item__overlay {
+  background: #00000032;
+  border-radius: 1rem;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transition: 0.2s;
+  transform: translateY(100%);
+}
+
+.all-ciders .item__overlay button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  text-transform: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+}
+
+.all-ciders .beer:hover .item__overlay{
+  transform: translateY(0);
+}
+
+.all-ciders .beer:hover img{
+  transform: scale(1.4);
+}
+
+
+/* ============
+contact-us
+============ */
+
+.contact-us {
+  margin: 8rem auto 0;
+  padding: 4rem 3rem;
+  background-color: white;
+  color: rgb(114, 114, 114);
+  max-width: 40rem;
+}
+
+.contact-us h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.contact-us p {
+  margin: 2rem 0;
+}
+
+.contact-us form {
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1.5rem;
+}
+
+.contact-us form input,
+.contact-us form select,
+.contact-us form textarea {
+  background: #ececec;
+  border: none;
+  padding: 0.8rem;
+  color: rgb(114, 114, 114);
+  width: 100%;
+}
+
+.contact-us form .select {
+  background: #ececec;
+  background-image: url(../images/dropdown-arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 2rem;
+  overflow: hidden;
+}
+
+.contact-us form select {
+  background: transparent !important;
+  width: 140%;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.contact-us button {
+  grid-column-end: -1;
+  background: white;
+  border: none;
+  text-align: left;
+  margin-top: 2rem;
+  padding: 0.8rem 0;
+  color: rgb(114, 114, 114);
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-top: 1px solid grey;
+  position: relative;
+  cursor: pointer;
+}
+
+.contact-us button:after {
+  content: "\003E";
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.2rem;
+}
+
+
+@media screen and (max-width: 500px) {
+  .contact-us {
+    margin: 8rem 0;
+    padding: 4rem 1.5rem;
+  }
+}

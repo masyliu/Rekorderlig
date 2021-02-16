@@ -14,10 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300&display=swap" rel="stylesheet">
 </head>
-<body onload="myFunction()">
-  <div id="preloader">
-    <img src="images/loader.gif" alt="preloader">
-  </div>
+<body>
   <header>
     <a href="rekorderlig-index.html" id="logo">
       <img src="./images/logo.png" alt="Rekorderlig Logo">
@@ -35,16 +32,43 @@
       <a href="https://www.pinterest.com/rekorderlig/_created/" target="_blank"><i class="fab fa-pinterest"></i></a>
     </div>
   </header>
-  <section></section>
-  <script>
-    var myVar;
-    function myFunction() {
-      myVar = setTimeout(showPage, 1000);
-    }
-
-    function showPage() {
-      document.getElementById("preloader").style.display = "none";
-    }
-  </script>
+  <section class="all-ciders">
+    <div class="beer">
+      <img src="images/mango-raspberry-cider.png" alt="">
+      <div class="item__overlay">
+        <button>Details -></button>
+      </div>
+    </div>
+    <div class="beer">
+      <img src="images/passionfruit-cider.png" alt="">
+      <div class="item__overlay">
+        <button>Details -></button>
+      </div>
+    </div>
+    <div class="beer">
+      <img src="images/pear-cider.png" alt="">
+      <div class="item__overlay">
+        <button>Details -></button>
+      </div>
+    </div>
+    <div class="beer">
+      <img src="images/spiced-apple-cider.png" alt="">
+      <div class="item__overlay">
+        <button>Details -></button>
+      </div>
+    </div>
+    <div class="beer">
+      <img src="images/strawberrylime-cider.png" alt="">
+      <div class="item__overlay">
+        <button>Details -></button>
+      </div>
+    </div>
+    <div class="beer">
+      <img src="images/wild-berries-cider.png" alt="">
+      <div class="item__overlay">
+        <button>Details -></button>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

@@ -14,10 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300&display=swap" rel="stylesheet">
 </head>
-<body onload="myFunction()">
-  <div id="preloader">
-    <img src="images/loader.gif" alt="preloader">
-  </div>
+<body>
   <header>
     <a href="rekorderlig-index.html" id="logo">
       <img src="./images/logo.png" alt="Rekorderlig Logo">
@@ -35,16 +32,40 @@
       <a href="https://www.pinterest.com/rekorderlig/_created/" target="_blank"><i class="fab fa-pinterest"></i></a>
     </div>
   </header>
-  <section></section>
-  <script>
-    var myVar;
-    function myFunction() {
-      myVar = setTimeout(showPage, 1000);
-    }
-
-    function showPage() {
-      document.getElementById("preloader").style.display = "none";
-    }
-  </script>
+  <section>
+    <div class="contact-us">
+      <h1>Contact Us</h1>
+      <p>Rekorderlig Global Office,<br>
+         2nd Floor,<br>
+         24 Lever Street,<br>
+         Manchester<br>
+         M1 1DZ, United Kingdom</p>
+      <form id="contact-form" action="rekorderlig-contact-us.html" method="post" novalidate>
+        <label for="name">Your name</label>
+        <div class="required">
+          <input type="text" id="name" placeholder="Name" required>
+        </div>
+        <label for="email">Your email</label>
+        <div class="required">
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <label for="phone-number">Your phone number</label>
+        <div class="required">
+          <input type="text" id="phone-number" placeholder="Phone number" required>
+        </div>
+        <label for="enquiry">What is your enquiry regarding?</label>
+        <div class="select">
+          <select name="enquiry" id="enquiry">
+            <option value="general">General</option>
+            <option value="Sales">Sales</option>
+            <option value="sponsorship-and-promotions">Sponsorship and Promotions</option>
+          </select>
+        </div>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="15" rows="8"></textarea>
+        <button id="submit" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 </body>
 </html>
