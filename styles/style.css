@@ -3,7 +3,7 @@ html {
   height: 100vw;
   color: white;
   font-family: serif;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/background.jpg) no-repeat center center fixed;
+  background: url(../images/unsplash-fabian-quintero.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
 }
@@ -53,7 +53,7 @@ header {
   font-family: 'Manrope', sans-serif;
   font: 200;
   z-index: 10;
-  background-color:rgba(170, 170, 170, 0.274);
+  background-color:rgb(114, 114, 114);
 }
 
 a {
@@ -68,7 +68,7 @@ a {
 nav {
   flex: 1;
   display: flex;
-  margin: 2rem;
+  margin: 2rem 3rem;
 }
 
 nav a {
@@ -114,6 +114,63 @@ video
 	color:#fff;
 	text-align: center;
 } */
+
+
+
+/* ============
+about-us
+============ */
+
+.about-us {
+  margin: 8rem auto 0;
+  padding: 4rem 3rem;
+  background-color: white;
+  color: rgb(114, 114, 114);
+  max-width: 40rem;
+  position: relative;
+}
+
+.about-us h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.about-us p {
+  margin: 2rem 0;
+  text-align: justify;
+}
+
+.cheer-pic img {
+  height: 5rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 6rem;
+}
+
+.cheer-pic #cider1{
+  transform: rotate(0deg) translateX(-2rem);
+  animation-name: cheer1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.cheer-pic #cider2{
+  transform: rotate(0deg)  translateX(2rem);
+  animation-name: cheer2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cheer1 {
+  50% {
+    transform: rotate(5deg) translateX(-1.3rem);
+  }
+}
+
+@keyframes cheer2 {
+  50% {
+    transform: rotate(-5deg) translateX(1.3rem);
+  }
+}
 
 /* ============
 flavours
@@ -206,10 +263,24 @@ contact-us
 .contact-us form select,
 .contact-us form textarea {
   background: #ececec;
+  outline: none;
   border: none;
   padding: 0.8rem;
   color: rgb(114, 114, 114);
   width: 100%;
+}
+
+.contact-us form .required {
+  position: relative;
+}
+
+.contact-us form .required:after {
+  content: "\26A0";
+  color: red;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.4rem;
 }
 
 .contact-us form .select {
