@@ -18,6 +18,11 @@ section {
   margin: 4rem 4rem 0;
 }
 
+@media screen and (max-width: 800px) {
+  section {
+    margin: 4rem 0 0; 
+  }
+}
 /* ============
 preloader
 ============ */
@@ -82,7 +87,7 @@ header a {
 }
 
 #nav a {
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 #contact-links {
@@ -98,14 +103,34 @@ header a {
 @media screen and (max-width: 750px) {
   header {
     grid-template-areas:
-    "logo contact-links"
-    "logo nav";
+    "logo nav"
+    "logo contact-links";
     height: 6rem;
     padding: 0 1.2rem;
   }
 
   #nav {
     justify-self: end;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    grid-template-areas:
+    "logo nav"
+    "contact-links nav";
+    height: 6rem;
+    padding: 0 1.2rem;
+  }
+
+  #nav {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 0.2rem;
+  }
+  #logo, #contact-links {
+    justify-self: center;
   }
 }
 
@@ -172,7 +197,11 @@ about-us
     transform: rotate(-5deg) translateX(1.3rem);
   }
 }
-
+@media screen and (max-width: 400px) {
+  .about-us {
+    padding: 4rem 1.5rem;
+  }
+}
 /* ============
 flavours
 ============ */
@@ -291,6 +320,9 @@ flavours
 }
 
 @media screen and (max-width: 600px) {
+  .flavours .overlay {
+    padding: 3rem 1rem;
+  }
   .flavours .overlay-inner {
     grid-template-areas: "about";
   }
