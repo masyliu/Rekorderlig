@@ -299,7 +299,7 @@ flavours
   display: grid;
   justify-items: center;
   align-items: center;
-  transition: all 0.2s;
+  transition: transform 300ms;
   transform: translateY(100%);
 }
 
