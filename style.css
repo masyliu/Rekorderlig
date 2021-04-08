@@ -1,5 +1,6 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100vw;
   color: white;
   font-family: serif;
@@ -9,7 +10,8 @@ html {
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -59,9 +61,14 @@ header {
   display: grid;
   grid-template-areas: 
   "logo nav contact-links";
-  column-gap: 1rem;
-  align-content: center;
-  align-items: center;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Manrope', sans-serif;
   font: 200;
   z-index: 10;
@@ -93,6 +100,8 @@ header a {
 #contact-links {
   grid-area: contact-links;
   justify-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -124,8 +133,13 @@ header a {
   }
 
   #nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     justify-self: center;
     gap: 0.2rem;
   }
@@ -173,28 +187,54 @@ about-us
 }
 
 .cheer-pic #cider1 {
-  transform: rotate(0deg) translateX(-2rem);
-  animation-name: cheer1;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  -webkit-transform: rotate(0deg) translateX(-2rem);
+      -ms-transform: rotate(0deg) translateX(-2rem);
+          transform: rotate(0deg) translateX(-2rem);
+  -webkit-animation-name: cheer1;
+          animation-name: cheer1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .cheer-pic #cider2{
-  transform: rotate(0deg)  translateX(2rem);
-  animation-name: cheer2;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  -webkit-transform: rotate(0deg)  translateX(2rem);
+      -ms-transform: rotate(0deg)  translateX(2rem);
+          transform: rotate(0deg)  translateX(2rem);
+  -webkit-animation-name: cheer2;
+          animation-name: cheer2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes cheer1 {
+  50% {
+    -webkit-transform: rotate(5deg) translateX(-1.3rem);
+            transform: rotate(5deg) translateX(-1.3rem);
+  }
 }
 
 @keyframes cheer1 {
   50% {
-    transform: rotate(5deg) translateX(-1.3rem);
+    -webkit-transform: rotate(5deg) translateX(-1.3rem);
+            transform: rotate(5deg) translateX(-1.3rem);
+  }
+}
+
+@-webkit-keyframes cheer2 {
+  50% {
+    -webkit-transform: rotate(-5deg) translateX(1.3rem);
+            transform: rotate(-5deg) translateX(1.3rem);
   }
 }
 
 @keyframes cheer2 {
   50% {
-    transform: rotate(-5deg) translateX(1.3rem);
+    -webkit-transform: rotate(-5deg) translateX(1.3rem);
+            transform: rotate(-5deg) translateX(1.3rem);
   }
 }
 @media screen and (max-width: 400px) {
@@ -240,8 +280,12 @@ flavours
 .flavours .overlay-inner {
   display: grid;
   grid-template-areas: "img about";
-  column-gap: 4rem;
-  align-items: center;
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   justify-items: center;
 }
 
@@ -269,8 +313,12 @@ flavours
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, 10rem);
-  column-gap: 1rem;
-  justify-content: center;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .all-ciders .beer {
@@ -287,7 +335,8 @@ flavours
   width: 100%;
   height: 100%;
   padding: 2rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .all-ciders .item__overlay {
@@ -298,9 +347,17 @@ flavours
   position: relative;
   display: grid;
   justify-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  -o-transition: transform 300ms;
   transition: transform 300ms;
-  transform: translateY(100%);
+  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .all-ciders .item__overlay button {
@@ -312,11 +369,15 @@ flavours
 }
 
 .all-ciders .beer:hover .item__overlay{
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .all-ciders .beer:hover img{
-  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 @media screen and (max-width: 600px) {
@@ -356,7 +417,9 @@ contact-us
   margin: 3rem 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   grid-gap: 1.5rem;
 }
 
@@ -396,7 +459,9 @@ contact-us
 .contact-us form select {
   background: transparent !important;
   width: 140%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   border: none;
 }
